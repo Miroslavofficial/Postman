@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "65ca631b-e359-435a-873a-05cd60696971",
+		"name": "Test of web-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"minimini@mail.ru\",\r\n    \"name\": \" Олег\",\r\n    \"password\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"email\": \"qwerty@mail.ru\",\r\n    \"name\": \" Ivan\",\r\n    \"password\": \"333\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Params",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister?email=olegivanov@mail.ru&name=olegog&password=23",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "olegivanov@mail.ru"
+						},
+						{
+							"key": "name",
+							"value": "olegog"
+						},
+						{
+							"key": "password",
+							"value": "23"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"Рога и блохи\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"qwerty@mail.ru\", \"minimini@mail.ru\"],\r\n  \"email_owner\": \"olegivanov@mail.ru\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create company param",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company_name",
+							"value": "Рога и лохи",
+							"type": "text"
+						},
+						{
+							"key": "company_type",
+							"value": "ООО",
+							"type": "text"
+						},
+						{
+							"key": "company_users[0]",
+							"value": "qwerty@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "company_users[1]",
+							"value": "minimini@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "email_owner",
+							"value": "olegivanov@mail.ru",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany/",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"globasosi@mail.ru\",\r\n  \"name\": \"osdddddd\",\r\n   \"tasks\": [159,160],\r\n  \"companies\": [55,59],\r\n  \"hobby\":\"плавание, чтение книг\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Олег\",\r\n  \"surname1\":\"Бакланов\",\r\n  \"fathername1\":\"Маринович\",\r\n  \"cat\":\"Лиза\",\r\n  \"dog\":\"-\",\r\n  \"parrot\":\"-\",\r\n  \"cavy\":\"-\",\r\n  \"hamster\":\"-\",\r\n  \"squirrel\":\"По пьяне\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123789645825\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User With Tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"globalos@mail.ru\",\r\n  \"name\": \"gleb\",\r\n   \"tasks\": [{\r\n   \"title\": \"Первая задача 1\",\r\n   \"description\": \"Первая задача 11\"\r\n  },\r\n  {\r\n   \"title\": \"Вторая задача 2\",\r\n   \"description\": \"Вторая задача 22\"\r\n  }\r\n ],\r\n  \"companies\": [55,59],\r\n  \"hobby\":\"плавание, чтение книг\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Олег\",\r\n  \"surname1\":\"Бакланов\",\r\n  \"fathername1\":\"Маринович\",\r\n  \"cat\":\"Лиза\",\r\n  \"dog\":\"-\",\r\n  \"parrot\":\"-\",\r\n  \"cavy\":\"-\",\r\n  \"hamster\":\"-\",\r\n  \"squirrel\":\"По пьяне\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123789645825\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "olegivanov@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Miroslav/Desktop/Без названия.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Avatar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar?email=olegivanov@mail.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "olegivanov@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
